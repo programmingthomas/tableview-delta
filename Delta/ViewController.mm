@@ -183,28 +183,19 @@
 }
 
 - (IBAction)update:(id)sender {
-    auto changes = self.nobleGasesOnly ? Delta<Element>::ChangesBetweenArrays(NobleGases, AllElements) : Delta<Element>::ChangesBetweenArrays(AllElements, NobleGases);
+    auto changes = self.nobleGasesOnly ? Delta<Element>::ChangesBetweenArrays(NobleGases, AllElements) :
+                                         Delta<Element>::ChangesBetweenArrays(AllElements, NobleGases);
     
     [self.tableView beginUpdates];
     
     for (auto& change : changes) {
-        switch (change.Type) {
-            case DeltaType::Insert:
-                [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:change.Index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-                break;
-            case DeltaType::Delete:
-                [self.tableView deleteRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:change.Index inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-                break;
-            default:
-                break;
-        }
+        change.Execute(self.tableView);
     }
     
     self.nobleGasesOnly = !self.nobleGasesOnly;
+    self.title = self.nobleGasesOnly ? @"Noble gases" : @"All elements";
     
     [self.tableView endUpdates];
-    
-    self.title = self.nobleGasesOnly ? @"Noble gases" : @"All elements";
 }
 
 
