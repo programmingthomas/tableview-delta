@@ -1,11 +1,3 @@
-//
-//  Delta.h
-//  Delta
-//
-//  Created by Thomas Denney on 12/02/2015.
-//  Copyright (c) 2015 Programming Thomas. All rights reserved.
-//
-
 #ifndef __Delta__diff__
 #define __Delta__diff__
 
