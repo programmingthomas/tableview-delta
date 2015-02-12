@@ -175,6 +175,7 @@
     auto element = self.nobleGasesOnly ? NobleGases[indexPath.row] : AllElements[indexPath.row];
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
     cell.textLabel.text = [NSString stringWithUTF8String:element.Name.c_str()];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%s - %d - %f", element.Symbol.c_str(), element.Number, element.Weight];
     
