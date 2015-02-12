@@ -7,11 +7,3 @@
 //
 
 #include "Model.h"
-
-bool operator== (Model& left, Model& right) {
-    return left.Title == right.Title;
-}
-
-bool operator< (Model& left, Model& right) {
-    return left.Title < right.Title;
-}

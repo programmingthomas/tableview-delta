@@ -17,8 +17,13 @@ public:
     
     Model(const std::string& title): Title(title) {}
     
-    friend bool operator== (Model& left, Model& right);
-    friend bool operator< (Model& left, Model& right);
+    friend bool operator== (const Model& left, const Model& right) {
+        return left.Title == right.Title;
+    }
+    
+    friend bool operator< (const Model& left, const Model& right) {
+        return left.Title < right.Title;
+    }
 };
 
 #endif /* defined(__Delta__Model__) */

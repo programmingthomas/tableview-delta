@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E96B8E1B1A8C989B002F9B93 /* diff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96B8E191A8C989B002F9B93 /* diff.cpp */; };
 		E9DBCB321A8C95E800310871 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB311A8C95E800310871 /* main.m */; };
 		E9DBCB351A8C95E800310871 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB341A8C95E800310871 /* AppDelegate.m */; };
-		E9DBCB381A8C95E800310871 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB371A8C95E800310871 /* ViewController.m */; };
+		E9DBCB381A8C95E800310871 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB371A8C95E800310871 /* ViewController.mm */; };
 		E9DBCB3B1A8C95E800310871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9DBCB391A8C95E800310871 /* Main.storyboard */; };
 		E9DBCB3D1A8C95E800310871 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9DBCB3C1A8C95E800310871 /* Images.xcassets */; };
 		E9DBCB401A8C95E800310871 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DBCB3E1A8C95E800310871 /* LaunchScreen.xib */; };
@@ -28,13 +29,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E96B8E191A8C989B002F9B93 /* diff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diff.cpp; sourceTree = "<group>"; };
+		E96B8E1A1A8C989B002F9B93 /* diff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diff.h; sourceTree = "<group>"; };
 		E9DBCB2C1A8C95E800310871 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBCB301A8C95E800310871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DBCB311A8C95E800310871 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E9DBCB331A8C95E800310871 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9DBCB341A8C95E800310871 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E9DBCB361A8C95E800310871 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E9DBCB371A8C95E800310871 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E9DBCB371A8C95E800310871 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E9DBCB3A1A8C95E800310871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9DBCB3C1A8C95E800310871 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E9DBCB3F1A8C95E800310871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -87,13 +90,15 @@
 				E9DBCB331A8C95E800310871 /* AppDelegate.h */,
 				E9DBCB341A8C95E800310871 /* AppDelegate.m */,
 				E9DBCB361A8C95E800310871 /* ViewController.h */,
-				E9DBCB371A8C95E800310871 /* ViewController.m */,
+				E9DBCB371A8C95E800310871 /* ViewController.mm */,
 				E9DBCB391A8C95E800310871 /* Main.storyboard */,
 				E9DBCB3C1A8C95E800310871 /* Images.xcassets */,
 				E9DBCB3E1A8C95E800310871 /* LaunchScreen.xib */,
 				E9DBCB2F1A8C95E800310871 /* Supporting Files */,
 				E9DBCB551A8C965100310871 /* Model.cpp */,
 				E9DBCB561A8C965100310871 /* Model.h */,
+				E96B8E191A8C989B002F9B93 /* diff.cpp */,
+				E96B8E1A1A8C989B002F9B93 /* diff.h */,
 			);
 			path = Delta;
 			sourceTree = "<group>";
@@ -224,9 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9DBCB381A8C95E800310871 /* ViewController.m in Sources */,
+				E9DBCB381A8C95E800310871 /* ViewController.mm in Sources */,
 				E9DBCB351A8C95E800310871 /* AppDelegate.m in Sources */,
 				E9DBCB321A8C95E800310871 /* main.m in Sources */,
+				E96B8E1B1A8C989B002F9B93 /* diff.cpp in Sources */,
 				E9DBCB571A8C965100310871 /* Model.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +359,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++1y",
+					"-stdlib=libc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -363,6 +374,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Delta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++1y",
+					"-stdlib=libc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -420,6 +436,7 @@
 				E9DBCB511A8C95E800310871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E9DBCB521A8C95E800310871 /* Build configuration list for PBXNativeTarget "DeltaTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +445,7 @@
 				E9DBCB541A8C95E800310871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
