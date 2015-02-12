@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "Model.h"
+
 #include <vector>
 #include <iostream>
-#include "diff.h"
+
+#import "Delta.h"
 #import "Element.h"
 
 @interface ViewController () {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E96B8E1B1A8C989B002F9B93 /* diff.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E96B8E191A8C989B002F9B93 /* diff.cpp */; };
 		E9DBCB321A8C95E800310871 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB311A8C95E800310871 /* main.m */; };
 		E9DBCB351A8C95E800310871 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB341A8C95E800310871 /* AppDelegate.m */; };
 		E9DBCB381A8C95E800310871 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB371A8C95E800310871 /* ViewController.mm */; };
@@ -15,7 +14,6 @@
 		E9DBCB3D1A8C95E800310871 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9DBCB3C1A8C95E800310871 /* Images.xcassets */; };
 		E9DBCB401A8C95E800310871 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9DBCB3E1A8C95E800310871 /* LaunchScreen.xib */; };
 		E9DBCB4C1A8C95E800310871 /* DeltaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB4B1A8C95E800310871 /* DeltaTests.m */; };
-		E9DBCB571A8C965100310871 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E9DBCB551A8C965100310871 /* Model.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E96B8E191A8C989B002F9B93 /* diff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diff.cpp; sourceTree = "<group>"; };
-		E96B8E1A1A8C989B002F9B93 /* diff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diff.h; sourceTree = "<group>"; };
+		E96B8E1A1A8C989B002F9B93 /* Delta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delta.h; sourceTree = "<group>"; };
 		E96B8E1D1A8D04F5002F9B93 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
 		E9DBCB2C1A8C95E800310871 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBCB301A8C95E800310871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,8 +42,6 @@
 		E9DBCB451A8C95E800310871 /* DeltaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeltaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBCB4A1A8C95E800310871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DBCB4B1A8C95E800310871 /* DeltaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeltaTests.m; sourceTree = "<group>"; };
-		E9DBCB551A8C965100310871 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
-		E9DBCB561A8C965100310871 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +91,7 @@
 				E9DBCB3C1A8C95E800310871 /* Images.xcassets */,
 				E9DBCB3E1A8C95E800310871 /* LaunchScreen.xib */,
 				E9DBCB2F1A8C95E800310871 /* Supporting Files */,
-				E9DBCB551A8C965100310871 /* Model.cpp */,
-				E9DBCB561A8C965100310871 /* Model.h */,
-				E96B8E191A8C989B002F9B93 /* diff.cpp */,
-				E96B8E1A1A8C989B002F9B93 /* diff.h */,
+				E96B8E1A1A8C989B002F9B93 /* Delta.h */,
 				E96B8E1D1A8D04F5002F9B93 /* Element.h */,
 			);
 			path = Delta;
@@ -234,8 +226,6 @@
 				E9DBCB381A8C95E800310871 /* ViewController.mm in Sources */,
 				E9DBCB351A8C95E800310871 /* AppDelegate.m in Sources */,
 				E9DBCB321A8C95E800310871 /* main.m in Sources */,
-				E96B8E1B1A8C989B002F9B93 /* diff.cpp in Sources */,
-				E9DBCB571A8C965100310871 /* Model.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  diff.h
+//  Delta.h
 //  Delta
 //
 //  Created by Thomas Denney on 12/02/2015.
