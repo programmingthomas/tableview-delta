@@ -31,6 +31,7 @@
 /* Begin PBXFileReference section */
 		E96B8E191A8C989B002F9B93 /* diff.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = diff.cpp; sourceTree = "<group>"; };
 		E96B8E1A1A8C989B002F9B93 /* diff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diff.h; sourceTree = "<group>"; };
+		E96B8E1D1A8D04F5002F9B93 /* Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Element.h; sourceTree = "<group>"; };
 		E9DBCB2C1A8C95E800310871 /* Delta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DBCB301A8C95E800310871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9DBCB311A8C95E800310871 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 				E9DBCB561A8C965100310871 /* Model.h */,
 				E96B8E191A8C989B002F9B93 /* diff.cpp */,
 				E96B8E1A1A8C989B002F9B93 /* diff.h */,
+				E96B8E1D1A8D04F5002F9B93 /* Element.h */,
 			);
 			path = Delta;
 			sourceTree = "<group>";
