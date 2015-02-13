@@ -51,33 +51,42 @@ public:
      */
     static std::vector<Delta<T>> ChangesBetweenArrays(const std::vector<T>& oldArray, const std::vector<T>& newArray) {
         std::vector<Delta<T>> changes;
-        auto i = 0, j = 0;
-        auto relativeIndex = 0;
-        while (i < oldArray.size() || j < newArray.size()) {
-            if (i == oldArray.size()) {
-                changes.emplace_back(relativeIndex, DeltaType::Insert);
-                j++;
-                relativeIndex++;
+        
+        auto oldIterator = oldArray.begin();
+        auto newIterator = newArray.begin();
+        
+        //Need to keep track of these separately as UITableView expects delete indicies to refer
+        //to the original indicies and insert indicies to refer to the new ones.
+        auto deleteIndex = 0;
+        auto insertIndex = 0;
+        
+        while (oldIterator != oldArray.end() || newIterator != newArray.end()) {
+            if (oldIterator == oldArray.end()) {
+                changes.emplace_back(insertIndex, DeltaType::Insert);
+                ++newIterator;
+                insertIndex++;
             }
-            else if (j == newArray.size()) {
-                changes.emplace_back(i, DeltaType::Delete);
-                i++;
+            else if (newIterator == newArray.end()) {
+                changes.emplace_back(deleteIndex, DeltaType::Delete);
+                deleteIndex++;
+                ++oldIterator;
             }
             else {
-                if (oldArray[i] == newArray[j]) {
-                    i++;
-                    j++;
-                    relativeIndex++;
+                if (*oldIterator == *newIterator) {
+                    insertIndex++;
+                    deleteIndex++;
+                    ++oldIterator;
+                    ++newIterator;
                 }
-                else if (oldArray[i] < newArray[j]) {
-                    
-                    changes.emplace_back(i, DeltaType::Delete);
-                    i++;
+                else if (*oldIterator < *newIterator) {
+                    changes.emplace_back(deleteIndex, DeltaType::Delete);
+                    deleteIndex++;
+                    oldIterator++;
                 }
                 else {
-                    changes.emplace_back(relativeIndex, DeltaType::Insert);
-                    relativeIndex++;
-                    j++;
+                    changes.emplace_back(insertIndex, DeltaType::Insert);
+                    insertIndex++;
+                    ++newIterator;
                 }
             }
         }
