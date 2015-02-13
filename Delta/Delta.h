@@ -62,28 +62,33 @@ public:
         
         while (oldIterator != oldArray.end() || newIterator != newArray.end()) {
             if (oldIterator == oldArray.end()) {
+                //The new array is longer than the old, so insert items at the end
                 changes.emplace_back(insertIndex, DeltaType::Insert);
                 ++newIterator;
                 insertIndex++;
             }
             else if (newIterator == newArray.end()) {
+                //The old array is longer than the new, so delete items at the end
                 changes.emplace_back(deleteIndex, DeltaType::Delete);
                 deleteIndex++;
                 ++oldIterator;
             }
             else {
                 if (*oldIterator == *newIterator) {
+                    //Two items are equal, so progress to the next pair
                     insertIndex++;
                     deleteIndex++;
                     ++oldIterator;
                     ++newIterator;
                 }
                 else if (*oldIterator < *newIterator) {
+                    //Deleted something from the old array
                     changes.emplace_back(deleteIndex, DeltaType::Delete);
                     deleteIndex++;
                     oldIterator++;
                 }
                 else {
+                    //Inserted something into the new array
                     changes.emplace_back(insertIndex, DeltaType::Insert);
                     insertIndex++;
                     ++newIterator;
